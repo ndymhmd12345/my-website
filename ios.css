@@ -1,0 +1,408 @@
+/* استدعاء الخط */
+body {
+    font-family: 'Tajawal', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f5f7fa;
+    color: #222;
+    line-height: 1.8;
+    direction: rtl;
+    /* علشان عربي */
+    text-align: center;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+/* شريط التنقل */
+.navbar a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: 700px;
+    padding: 8px 15px;
+        /* padding علشان الخلفية متتهزش */
+        background-color: #135dbf;
+        /* خلفية ثابتة */
+        border-radius: 20px;
+        /* زوايا ناعمة */
+        transition: background-color 0.3s ease, color 0.3s ease;
+    /* نحدد ايه اللي يتأثر فقط */
+}
+
+.navbar a:hover {
+    color: #f6b93b;
+    /* يغير اللون */
+    font-size: 3em;
+    /* يكبر الخط بس */
+    background-color: #f6b93b;
+        /* يتغير لون الخلفية بس */
+        color: #1447ae;
+        /* يغير لون الخط */
+}
+/* العناوين */
+h1 {
+    font-size: 2.5rem;
+    color: #0a3d62;
+    margin-top: 20px;
+    animation: fadeUp 1s ease-out forwards;
+}
+
+h2 {
+    font-size: 1.3rem;
+    color: #3c6382;
+    margin: 15px auto;
+    width: 80%;
+    animation: fadeUp 1.3s ease-out forwards;
+}
+
+/* الأنيميشن للكلام */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeUp 1s ease-out forwards;
+}
+
+/* القوائم */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 30px auto;
+    width: 80%;
+    text-align: right;
+}
+
+ul li {
+    background: #e2e2e2;
+    margin: 10px 0;
+    padding: 12px 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    font-size: 1.1rem;
+    transition: transform 0.3s ease;
+}
+
+ul li:hover {
+    transform: translateX(-5px);
+}
+
+/* الصور */
+.responsive {
+    max-width: 55%;
+    height: auto;
+    margin: 25px auto;
+    display: block;
+    border-radius: 12px;
+    transition: all 0.4s ease-in-out;
+}
+
+/* انيميشن على الصورة بالماوس */
+.responsive:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* الفوتر */
+footer {
+    background: #0a3d62;
+    color: white;
+    padding: 15px;
+    margin-top: 40px;
+    font-size: 0.9rem;
+}
+.projects {
+    display: block;
+    /* علشان يبقى عنصر كامل */
+    margin: 20px auto;
+    /* مسافة من فوق وتحت وفي النص */
+    padding: 15px 20px;
+    /* مسافة داخلية */
+    width: fit-content;
+    /* ياخد مساحة على قد الكلام */
+
+    font-size: 1.6rem;
+    /* حجم الخط */
+    font-weight: 900;
+    /* تخانة الخط */
+    color: #0a3d62;
+    /* لون الخط */
+
+    background: #b0caed;
+    /* خلفية */
+    border-radius: 10px;
+    /* زوايا مدورة */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    /* ظل خفيف */
+
+    animation: fadeUp 1.2s ease-out forwards;
+    /* نفس انيميشن النصوص */
+    transition: transform 0.3s ease;
+}
+
+/* تأثير بالماوس */
+.projects:hover {
+    transform: scale(1.05);
+}
+
+
+ol,
+p,
+
+.code {
+    display: block;
+    /* علشان يبقى عنصر كامل */
+    margin: 20px auto;
+    /* مسافة من فوق وتحت وفي النص */
+    padding: 15px 20px;
+    /* مسافة داخلية */
+    width: fit-content;
+    /* ياخد مساحة على قد الكلام */
+
+    font-size: 2em;
+    /* حجم الخط */
+    font-weight: 900;
+    /* تخانة الخط */
+    color: #0a3d62;
+    /* لون الخط */
+
+    background: #82b0ed;
+    /* خلفية */
+    border-radius: 10px;
+    /* زوايا مدورة */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    /* ظل خفيف */
+
+    animation: fadeUp 1.2s ease-out forwards;
+    /* نفس انيميشن النصوص */
+    transition: transform 0.3s ease;
+}
+.some {display: block;
+    /* علشان يبقى عنصر كامل */
+    margin: 20px auto;
+    /* مسافة من فوق وتحت وفي النص */
+    padding: 15px 20px;
+    /* مسافة داخلية */
+    width: fit-content;
+    /* ياخد مساحة على قد الكلام */
+
+    font-size: 3.5em;
+    /* حجم الخط */
+    font-weight: 900;
+    /* تخانة الخط */
+    color: #0a3d62;
+    /* لون الخط */
+
+    background: #82b0ed;
+    /* خلفية */
+    border-radius: 30px;
+    /* زوايا مدورة */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    /* ظل خفيف */
+
+    animation: fadeUp 1.5s ease-out forwards;
+    /* نفس انيميشن النصوص */
+    transition: transform 0.3s ease;
+}
+/* المنيو على اليمين */
+/* القائمة الجانبية */
+.menu {
+    position: fixed;
+    right: -220px;
+    /* مخفية افتراضيًا */
+    top: 0;
+    height: 100vh;
+    width: 220px;
+    background: linear-gradient(180deg, #031738, #020d21);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px;
+    box-shadow: -3px 0 20px rgba(0, 0, 0, 0.7);
+    border-radius: 30px 0 0 30px;
+    transform: translateX(0);
+    transition: right 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+    z-index: 999;
+    overflow: hidden;
+}
+
+/* لما تبقى مفتوحة */
+.menu.open {
+    right: 0;
+    animation: glowBorder 2s infinite alternate;
+}
+
+/* روابط القائمة */
+.menu a {
+    width: 90%;
+    padding: 14px 20px;
+    margin: 10px 0;
+    text-decoration: none;
+    color: #dbe7ff;
+    font-weight: 700;
+    font-size: 1.1rem;
+    border-radius: 12px;
+    text-align: center;
+    letter-spacing: .5px;
+    position: relative;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(8px);
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+/* تأثير عند المرور */
+.menu a:hover {
+    color: #68e3ff;
+    transform: translateX(-6px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(104, 227, 255, 0.4);
+}
+
+/* خط مضيء خلف النص */
+.menu a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(104, 227, 255, 0.4), transparent);
+    transition: left 0.6s ease;
+}
+
+.menu a:hover::before {
+    left: 100%;
+}
+
+/* أيقونات قبل النص */
+.menu a::after {
+    content: "⚡";
+    margin-left: 6px;
+    transition: transform .3s ease;
+}
+
+.menu a:hover::after {
+    transform: rotate(360deg) scale(1.2);
+}
+
+/* زرار فتح/إغلاق */
+.menu-toggle {
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    width: 45px;
+    height: 45px;
+    background: linear-gradient(135deg, #68e3ff, #9d7bff);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: #fff;
+    font-size: 1.5rem;
+    box-shadow: 0 0 20px rgba(104, 227, 255, 0.6);
+    z-index: 1000;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-toggle:hover {
+    transform: rotate(90deg) scale(1.1);
+    box-shadow: 0 0 30px rgba(157, 123, 255, 0.7);
+}
+
+/* أنيميشنات */
+@keyframes glowBorder {
+    0% {
+        box-shadow: 0 0 15px rgba(104, 227, 255, 0.5);
+    }
+
+    100% {
+        box-shadow: 0 0 35px rgba(157, 123, 255, 0.7);
+    }
+}
+.more {
+    max-width: 800px;
+    /* عرض القسم */
+    margin: 40px auto;
+    /* توسيط */
+    padding: 20px;
+    background: #f4f7fb;
+    /* لون خلفية خفيف */
+    border-radius: 12px;
+    /* زوايا ناعمة */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* ظل خفيف */
+    text-align: center;
+    font-family: 'Tajawal', sans-serif;
+}
+
+.more .projects {
+    font-size: 28px;
+    font-weight: 900;
+    color: #1447ae;
+    margin-bottom: 20px;
+    animation: fadeInDown 1s ease;
+    /* أنميشن */
+}
+
+
+.more ul {
+    list-style: none;
+    /* شيل النقط */
+    padding: 0;
+    margin: 0;
+    text-align: right;
+    /* علشان عربي */
+}
+
+.more ul li {
+    background: white;
+    margin: 10px 0;
+    padding: 12px 15px;
+    border-radius: 8px;
+    font-size: 18px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.more ul li:hover {
+    background: #dfe9f7;
+    transform: translateX(-5px);
+    /* يتحرك شوية عند الماوس */
+}
+
+/* أنميشن العنوان */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* === Responsive Fixes Only === */
+
+/* الصور والفيديوهات تبقى متناسبة مع الشاشة */
+img,
+video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* لو في جداول تتظبط على الموبايل */
+.table-wrap {
+    overflow-x: auto;
+}
