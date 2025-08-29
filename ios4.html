@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الشبكات الآمنة</title>
+    <meta name="description" content="إزاي تستخدم الواي فاي بشكل آمن وتجنب المخاطر">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="ios4.css">
+</head>
+
+<body>
+    <!-- شريط التنقل -->
+    <nav>
+        <ul class="navbar">
+            <li><a href="ios.html">الرئيسية</a></li>
+            <li><a href="ios8.html">مقالات</a></li>
+            <li><a href="ios8.html">نصائح</a></li>
+            <li><a href="project contact.html">تواصل معنا</a></li>
+        </ul>
+    </nav>
+
+    <!-- العنوان -->
+    <header class="hero fade-in">
+        <h1>الشبكات الآمنة</h1>
+        <p>إزاي تستخدم الواي فاي بشكل آمن وتجنب الشبكات العامة 👨‍💻📶</p>
+    </header>
+
+    <!-- صورة -->
+    <section class="image-section fade-in">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhIGZ16dQ34Ga6J0AgGZTpPOH805VeBWga3aVPUFRTJloaZJh4dbttPf_e6jGbAOMZoVxWWw2gZBvRJuL1uC39RV-4cEabJ7B493tJAOUn27sExYzvi2Ix6cbyPVgyOn2baqHgifpWBUbsie-LfDnH2fFxT7OnaiHcng1yLxtUcgL1oYcybfRb_wD_Z-onA/s1200/%D9%88%D8%A7%D9%8A%20%D9%81%D8%A7%D9%8A.web"
+            alt="شبكات الواي فاي الآمنة" class="responsive">
+    </section>
+
+    <!-- المحتوى -->
+    <main class="content">
+        <h2 class="fade-in">📌 ليه لازم تهتم بأمان الشبكات؟</h2>
+        <p class="fade-in">كتير من الناس بتستخدم شبكات الواي فاي العامة في الكافيهات والمطارات من غير ما يعرفوا إنها
+            ممكن تكون فخ. أي هاكر على الشبكة دي يقدر يشوف بياناتك ويتجسس على تصفحك. عشان كده مهم تعرف إزاي تحمي نفسك
+            وتخلي الشبكة اللي بتستخدمها آمنة.</p>
+
+        <h2 class="fade-in">🚫 مخاطر استخدام الشبكات العامة</h2>
+        <ul>
+            <li class="slide-in">🔓 سرقة كلمات المرور والحسابات البنكية.</li>
+            <li class="slide-in">📡 هجمات "Man-in-the-Middle" اللي بتخلي الهاكر يتجسس على اتصالك.</li>
+            <li class="slide-in">💻 تحميل برمجيات خبيثة من غير ما تحس.</li>
+            <li class="slide-in">🎭 انتحال الشبكات (Fake WiFi) اللي بتخدعك تدخل عليها.</li>
+        </ul>
+
+        <h2 class="fade-in">💡 إزاي تحمي نفسك؟</h2>
+        <ul>
+            <li class="slide-in">✅ استخدم شبكة VPN عشان تشفر اتصالك.</li>
+            <li class="slide-in">🔐 اتأكد إن الشبكة محمية بباسورد (WPA2 أو WPA3).</li>
+            <li class="slide-in">🚫 بلاش تدخل بيانات حساسة على الشبكات العامة.</li>
+            <li class="slide-in">📱 قفل خاصية الاتصال التلقائي بالواي فاي.</li>
+            <li class="slide-in">🛠️ اعمل تحديث دوري للراوتر بتاعك.</li>
+            <li class="slide-in">👀 اتأكد من اسم الشبكة قبل ما تتصل بيها (عشان متدخلش على شبكة مزيفة).</li>
+        </ul>
+
+        <h2 class="fade-in">🔧 نصائح متقدمة</h2>
+        <ul>
+            <li class="slide-in">💾 استخدم جدار ناري (Firewall) عشان تمنع الاتصالات المشبوهة.</li>
+            <li class="slide-in">🖥️ شارك الإنترنت من الموبايل أفضل من استخدام شبكة عامة مش مضمونة.</li>
+            <li class="slide-in">🌐 خلي HTTPS Everywhere مفعّل في المتصفح.</li>
+            <li class="slide-in">🕵️‍♂️ راقب الأجهزة المتصلة معاك على نفس الشبكة.</li>
+        </ul>
+    </main>
+
+    <!-- فوتر -->
+    <footer class="fade-in">
+        <p>© 2025 موقع الحماية من الاختراق - جميع الحقوق محفوظة</p>
+    </footer>
+
+    <!-- JavaScript للأنيمشن -->
+    <script>
+        const faders = document.querySelectorAll('.fade-in, .slide-in');
+        const appearOptions = { threshold: 0.2 };
+        const appearOnScroll = new IntersectionObserver(function (entries, observer) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                entry.target.classList.add("appear");
+                observer.unobserve(entry.target);
+            });
+        }, appearOptions);
+
+        faders.forEach(fader => {
+            appearOnScroll.observe(fader);
+        });
+
+        // أنيمشن بسيط للعنوان
+        document.querySelector(".hero h1").addEventListener("mouseover", function () {
+            this.style.transform = "scale(1.1)";
+            this.style.color = "#f6b93b";
+        });
+        document.querySelector(".hero h1").addEventListener("mouseout", function () {
+            this.style.transform = "scale(1)";
+            this.style.color = "#1447ae";
+        });
+    </script>
+</body>
+
+</html>

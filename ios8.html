@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>هجمات الاختراق حول العالم | واحمِ نفسك</title>
+    <meta name="description"
+        content="موقع يشرح أنواع الاختراقات الشائعة حول العالم، أمثلة بارزة، ونصائح عملية لحماية نفسك وأجهزتك.">
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="stylesheet" href="ios8.css" />
+</head>
+
+<body>
+    <!-- شريط تقدم القراءة -->
+    <div class="reading-progress" aria-hidden="true"></div>
+
+    <!-- خلفية جزيئات خفيفة -->
+    <canvas id="bg-particles" aria-hidden="true"></canvas>
+
+    <!-- رأس الموقع / هيرو -->
+    <header class="hero reveal">
+        <nav class="nav">
+            <a class="brand" href="#home" aria-label="Home">Secure<span>Pulse</span></a>
+            <button class="nav__toggle" aria-label="فتح القائمة" aria-expanded="false">☰</button>
+            <ul class="nav__links">
+                <li><a href="#threats">أنواع الهجمات</a></li>
+                <li><a href="#cases">أمثلة عالمية</a></li>
+                <li><a href="#tips">نصائح الحماية</a></li>
+                <li><a href="#faq">أسئلة شائعة</a></li>
+            </ul>
+        </nav>
+
+        <div class="hero__content">
+            <h1 class="glitch" data-text="احمِ نفسك من الاختراق">احمِ نفسك من الاختراق</h1>
+            <p class="lead">فهم التهديدات الرقمية أول خطوة للحماية—هنا هنشرح أشهر الهجمات، أمثلة من العالم الحقيقي،
+                وخطوات عملية تحميك من غير ما تقلل أداء جهازك.</p>
+            <a class="btn btn--primary pulse" href="#tips">ابدأ بالحماية الآن</a>
+            <div class="hero__stats">
+                <div class="stat">
+                    <div class="num" data-target="92">0</div>
+                    <div class="label">٪ من الهجمات تبدأ ببريد تصيّدي</div>
+                </div>
+                <div class="stat">
+                    <div class="num" data-target="18">0</div>
+                    <div class="label">ثانية كافية لاختراق كلمة سر ضعيفة</div>
+                </div>
+                <div class="stat">
+                    <div class="num" data-target="2">0</div>
+                    <div class="label">FACTOR تفعيل</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- شريط أخبار/ماركيه وهمي للتوضيح -->
+        <div class="ticker" role="region" aria-label="آخر الحوادث (أمثلة تعليمية)">
+            <div class="ticker__track">
+                <span>🔒 هجوم تصيّد استهدف موظفين في شركة تقنية — تفعيل 2FA أحبط الاختراق.</span>
+                <span>🛡️ تسريب بيانات محدود بعد كلمة سر ضعيفة — تمت المعالجة بتغيير شامل لكلمات السر.</span>
+                <span>📶 هجوم Wi-Fi Evil Twin في مقهى — استخدام VPN منع سرقة الجلسات.</span>
+                <span>🐟 حملة SMS Phishing — التحقق من الرابط أنقذ المستخدمين.</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- أنواع التهديدات -->
+    <section id="threats" class="section">
+        <div class="section__head">
+            <h2 class="title reveal">أنواع الهجمات الشائعة</h2>
+            <p class="subtitle reveal">فهم العدو نصف المعركة—دي أشهر الطرق اللي المهاجمين بيستخدموها.</p>
+        </div>
+
+        <div class="grid cards">
+            <article class="card tilt reveal">
+                <div class="icon">🐟</div>
+                <h3>التصيّد (Phishing)</h3>
+                <p>رسائل أو صفحات مزورة تنتحل مؤسسات حقيقية لسرقة بيانات الدخول أو البطاقات.</p>
+                <ul class="mini">
+                    <li>دقق في عنوان المرسل والرابط</li>
+                    <li>ما تدخلش بياناتك من روابط مش مؤكدة</li>
+                </ul>
+            </article>
+
+            <article class="card tilt reveal">
+                <div class="icon">🔑</div>
+                <h3>كلمات سر ضعيفة</h3>
+                <p>استخدام كلمات قصيرة/متوقعة بيخلي التخمين التلقائي سريع جدًا.</p>
+                <ul class="mini">
+                    <li>استعمل مدير كلمات سر</li>
+                    <li>فعّل 2FA</li>
+                </ul>
+            </article>
+
+            <article class="card tilt reveal">
+                <div class="icon">📶</div>
+                <h3>شبكات عامة خبيثة</h3>
+                <p>نقاط Wi-Fi وهمية بتلتقط مرورك.</p>
+                <ul class="mini">
+                    <li>تجنب الشبكات المفتوحة</li>
+                    <li>استعمل VPN عند الضرورة</li>
+                </ul>
+            </article>
+
+            <article class="card tilt reveal">
+                <div class="icon">💣</div>
+                <h3>برمجيات خبيثة</h3>
+                <p>ملفات/مرفقات بتثبت برمجيات تتجسس أو تشفّر بياناتك (Ransomware).</p>
+                <ul class="mini">
+                    <li>حمّل من مصادر موثوقة</li>
+                    <li>تحديثات أمنية أولًا بأول</li>
+                </ul>
+            </article>
+        </div>
+    </section>
+
+    <!-- أمثلة عالمية (تايملاين) -->
+    <section id="cases" class="section alt">
+        <div class="section__head">
+            <h2 class="title reveal">أمثلة عالمية (توضيحية)</h2>
+            <p class="subtitle reveal">أحداث مختصرة بتوضح أثر الهجمات وازاي طرق الحماية بتفرق.</p>
+        </div>
+
+        <ol class="timeline">
+            <li class="timeline__item reveal">
+                <div class="dot"></div>
+                <div class="content">
+                    <h3>اختراق بريد موظفين عبر تصيّد</h3>
+                    <p>بعض الحسابات اتسرقت، لكن المستخدمين اللي فعّلوا 2FA أفلتوا.</p>
+                </div>
+            </li>
+            <li class="timeline__item reveal">
+                <div class="dot"></div>
+                <div class="content">
+                    <h3>هجوم Ransomware على أجهزة بلا نسخ احتياطي</h3>
+                    <p>تعطّل العمل يومين—النسخ الاحتياطي الدوري كان هيختصر الخسائر.</p>
+                </div>
+            </li>
+            <li class="timeline__item reveal">
+                <div class="dot"></div>
+                <div class="content">
+                    <h3>سرقة جلسات على Wi-Fi عام</h3>
+                    <p>استخدام VPN والتصفح المشفّر منع تسريب البيانات الحساسة.</p>
+                </div>
+            </li>
+        </ol>
+    </section>
+
+    <!-- نصائح الحماية -->
+    <section id="tips" class="section">
+        <div class="section__head">
+            <h2 class="title reveal">نصائح حماية سريعة</h2>
+            <p class="subtitle reveal">خطوات عملية تقلل المخاطر بشكل كبير.</p>
+        </div>
+
+        <div class="grid tips">
+            <div class="tip card tilt reveal">
+                <h3>مدير كلمات سر</h3>
+                <p>ينشئ كلمات قوية وفريدة لكل حساب.</p>
+                <button class="btn btn--ghost" data-copy="#password-recipe">انسخ وصفة كلمة سر</button>
+                <pre id="password-recipe" class="snippet">4 كلمات-عشوائية + رقمين + رمز خاص ✅</pre>
+            </div>
+            <div class="tip card tilt reveal">
+                <h3>2FA في كل مكان</h3>
+                <p>خصوصًا للبريد، السوشيال، وبطاقات الدفع.</p>
+            </div>
+            <div class="tip card tilt reveal">
+                <h3>تحديثات مستمرة</h3>
+                <p>حدّث النظام والمتصفح والإضافات أولًا بأول.</p>
+            </div>
+            <div class="tip card tilt reveal">
+                <h3>وعي بالتصيّد</h3>
+                <p>افتح الروابط بحذر، وتأكد من النطاق قبل تسجيل الدخول.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- أسئلة شائعة -->
+    <section id="faq" class="section alt">
+        <div class="section__head">
+            <h2 class="title reveal">أسئلة شائعة</h2>
+            <p class="subtitle reveal">إجابات قصيرة توضح لبس متكرر.</p>
+        </div>
+
+        <div class="faq">
+            <details class="reveal">
+                <summary>هل الـ VPN بيحميني من كل حاجة؟</summary>
+                <p>لا، VPN بيوفر تشفير للمسار، لكنه ما يمنع التصيّد أو البرمجيات الخبيثة.</p>
+            </details>
+            <details class="reveal">
+                <summary>هل مانع الإعلانات كفاية لوحده؟</summary>
+                <p>يساعد، لكن لازم تحديثات، 2FA، وكلمات سر قوية.</p>
+            </details>
+            <details class="reveal">
+                <summary>أفتح مرفقات من مين؟</summary>
+                <p>من مرسل موثوق وبصيغة متوقعة—وحتى كده افحصها قبل الفتح.</p>
+            </details>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>المحتوى لأغراض التوعية فقط—اتبع أفضل الممارسات الأمنية دائمًا.</p>
+    </footer>
+
+    <script>
+        // —— إعدادات عامة للأداء —— //
+        const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+        // — شريط التقدم —
+        const progressBar = document.querySelector(".reading-progress");
+        const onScrollProgress = () => {
+            const max = document.documentElement.scrollHeight - window.innerHeight;
+            const ratio = max > 0 ? (window.scrollY / max) : 0;
+            progressBar.style.transform = `scaleX(${ratio})`;
+        };
+        window.addEventListener("scroll", onScrollProgress, { passive: true });
+        onScrollProgress();
+
+        // — إظهار العناصر عند الظهور —
+        const revealEls = document.querySelectorAll(".reveal");
+        const io = new IntersectionObserver((entries) => {
+            entries.forEach((e) => {
+                if (e.isIntersecting) {
+                    e.target.classList.add("in-view");
+                    io.unobserve(e.target);
+                }
+            });
+        }, { threshold: 0.15, rootMargin: "0px 0px -10% 0px" });
+        revealEls.forEach(el => io.observe(el));
+
+        // — عدادات الأرقام —
+        const counters = document.querySelectorAll(".num");
+        const animateCount = (el) => {
+            const target = Number(el.dataset.target || 0);
+            const dur = 1200; // ms
+            const startTime = performance.now();
+            const step = (now) => {
+                const t = Math.min(1, (now - startTime) / dur);
+                const eased = t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t; // easeInOutQuad
+                el.textContent = Math.round(eased * target);
+                if (t < 1) requestAnimationFrame(step);
+            };
+            requestAnimationFrame(step);
+        };
+        counters.forEach((el) => {
+            io.observe(el);
+            // استخدام نفس الـ IO عبر class reveal? نضمن تشغيل العد عند الدخول
+            el.classList.add("reveal");
+            io.observe(el);
+            const watch = new IntersectionObserver((entries, obs) => {
+                if (entries[0].isIntersecting) { animateCount(el); obs.disconnect(); }
+            }, { threshold: 0.6 });
+            watch.observe(el);
+        });
+
+        // — تأثير الميل (Tilt) على الكروت —
+        const tilts = document.querySelectorAll(".tilt");
+        tilts.forEach((card) => {
+            let raf = null;
+            const onMove = (e) => {
+                if (prefersReduced) return;
+                const rect = card.getBoundingClientRect();
+                const cx = rect.left + rect.width / 2;
+                const cy = rect.top + rect.height / 2;
+                const dx = (e.clientX - cx) / rect.width;   // -0.5..0.5
+                const dy = (e.clientY - cy) / rect.height;  // -0.5..0.5
+                if (raf) cancelAnimationFrame(raf);
+                raf = requestAnimationFrame(() => {
+                    card.style.setProperty("--tiltX", (dy * -8).toFixed(2) + "deg");
+                    card.style.setProperty("--tiltY", (dx * 12).toFixed(2) + "deg");
+                    card.style.transform = `perspective(800px) rotateX(var(--tiltX)) rotateY(var(--tiltY)) translateZ(0)`;
+                });
+            };
+            const reset = () => {
+                card.style.transform = "";
+            };
+            card.addEventListener("mousemove", onMove);
+            card.addEventListener("mouseleave", reset);
+            card.addEventListener("touchmove", (e) => onMove(e.touches[0]), { passive: true });
+            card.addEventListener("touchend", reset);
+        });
+
+        // — نسخ وصفة كلمة سر —
+        document.querySelectorAll("[data-copy]").forEach(btn => {
+            btn.addEventListener("click", async () => {
+                const targetSel = btn.getAttribute("data-copy");
+                const text = document.querySelector(targetSel)?.innerText || "";
+                try {
+                    await navigator.clipboard.writeText(text);
+                    btn.classList.add("copied");
+                    btn.textContent = "اتنسخت ✅";
+                    setTimeout(() => { btn.classList.remove("copied"); btn.textContent = "انسخ وصفة كلمة سر"; }, 1200);
+                } catch { }
+            });
+        });
+
+        // — قائمة الجوال —
+        const toggle = document.querySelector(".nav__toggle");
+        const links = document.querySelector(".nav__links");
+        toggle.addEventListener("click", () => {
+            const expanded = toggle.getAttribute("aria-expanded") === "true";
+            toggle.setAttribute("aria-expanded", String(!expanded));
+            links.classList.toggle("open");
+        });
+
+        // — ماركيه استنساخ للمحتوى للسلاسة —
+        const track = document.querySelector(".ticker__track");
+        track.innerHTML += track.innerHTML;
+
+        // — جزيئات الخلفية (خفيفة) —
+        (function particles() {
+            const c = document.getElementById("bg-particles");
+            const ctx = c.getContext("2d");
+            const DPR = Math.min(2, window.devicePixelRatio || 1);
+            let W, H, STOP = false;
+
+            const N = prefersReduced ? 0 : 50; // عدد قليل للحفاظ على الأداء
+            const parts = [];
+
+            function resize() {
+                W = c.clientWidth = window.innerWidth;
+                H = c.clientHeight = Math.max(600, window.innerHeight * 0.8);
+                c.width = W * DPR; c.height = H * DPR;
+                ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
+            }
+            window.addEventListener("resize", resize);
+            resize();
+
+            for (let i = 0; i < N; i++) {
+                parts.push({
+                    x: Math.random() * W,
+                    y: Math.random() * H,
+                    r: Math.random() * 2 + 0.5,
+                    vx: (Math.random() - 0.5) * 0.3,
+                    vy: (Math.random() - 0.5) * 0.3,
+                    a: Math.random() * 0.6 + 0.2
+                });
+            }
+
+            function step() {
+                if (STOP) return;
+                ctx.clearRect(0, 0, W, H);
+                ctx.globalCompositeOperation = "lighter";
+                for (const p of parts) {
+                    p.x += p.vx; p.y += p.vy;
+                    if (p.x < 0 || p.x > W) p.vx *= -1;
+                    if (p.y < 0 || p.y > H) p.vy *= -1;
+
+                    ctx.globalAlpha = p.a;
+                    ctx.beginPath();
+                    ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+                    ctx.fillStyle = "#68e3ff";
+                    ctx.fill();
+                }
+                requestAnimationFrame(step);
+            }
+            step();
+
+            document.addEventListener("visibilitychange", () => {
+                STOP = document.hidden;
+                if (!STOP) step();
+            });
+        })();
+    </script>
+</body>
+
+</html>

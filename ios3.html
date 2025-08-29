@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>التحديثات والباتشات</title>
+    <meta name="description" content="أهمية تحديث نظام التشغيل والبرامج بانتظام">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="ios3.css">
+</head>
+
+<body>
+    <!-- شريط التنقل -->
+    <nav>
+        <ul class="navbar">
+            <li><a href="ios.html">الرئيسية</a></li>
+            <li><a href="ios8.html">مقالات</a></li>
+            <li><a href="project contact.html">تواصل معنا</a></li>
+        </ul>
+    </nav>
+
+    <!-- العنوان الرئيسي -->
+    <header class="hero fade-in">
+        <h1>التحديثات والباتشات</h1>
+        <p>ليه مهم تحدث نظام التشغيل والبرامج بانتظام؟ 🤔</p>
+    </header>
+
+    <!-- صورة -->
+    <section class="image-section fade-in">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFA1LKiGe29O8Wh6hc_7INhQBB_VrKw8WPJg&s" alt="التحديثات والباتشات"
+            class="responsive">
+    </section>
+
+    <!-- المحتوى -->
+    <main class="content">
+        <h2 class="fade-in">🚀 ليه التحديثات مهمة؟</h2>
+        <ul>
+            <li class="slide-in">🔒 غلق الثغرات الأمنية اللي ممكن الهاكرز يستغلوها.</li>
+            <li class="slide-in">⚡ تحسين أداء الجهاز والبرامج.</li>
+            <li class="slide-in">🛠️ إصلاح الأخطاء (Bugs) اللي بتسبب مشاكل.</li>
+            <li class="slide-in">✨ إضافة مميزات جديدة بتخلي تجربتك أفضل.</li>
+        </ul>
+
+        <h2 class="fade-in">💡 إزاي تحافظ على جهازك محدث؟</h2>
+        <ul>
+            <li class="slide-in">✅ فعل التحديث التلقائي لنظام التشغيل.</li>
+            <li class="slide-in">📱 حدث التطبيقات من متجر البرامج.</li>
+            <li class="slide-in">🖥️ حمل التحديثات الرسمية من المواقع الموثوقة.</li>
+            <li class="slide-in">⏰ اعمل جدول دوري لمراجعة التحديثات.</li>
+        </ul>
+    </main>
+
+    <!-- فوتر -->
+    <footer class="fade-in">
+        <p>© 2025 موقع الحماية من الاختراق - جميع الحقوق محفوظة</p>
+    </footer>
+
+    <script>
+        // أنيمشن للظهور التدريجي عند السكرول
+        const faders = document.querySelectorAll('.fade-in, .slide-in');
+        const appearOptions = { threshold: 0.2 };
+        const appearOnScroll = new IntersectionObserver(function (entries, observer) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                entry.target.classList.add("appear");
+                observer.unobserve(entry.target);
+            });
+        }, appearOptions);
+
+        faders.forEach(fader => {
+            appearOnScroll.observe(fader);
+        });
+    </script>
+</body>
+
+</html>

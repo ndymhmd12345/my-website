@@ -1,0 +1,171 @@
+/* إعدادات عامة */
+body {
+    font-family: 'Tajawal', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #1e3c72, #2a5298, #6dd5ed, #2193b0);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    color: #fff;
+    line-height: 1.8;
+    overflow-x: hidden;
+    word-wrap: break-word;
+        overflow-wrap: break-word;
+}
+
+/* أنيميشن الخلفية */
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* شريط التنقل */
+nav {
+    background: rgba(0, 0, 0, 0.4);
+    padding: 15px 0;
+    text-align: center;
+}
+
+.navbar {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+.navbar a {
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #f6b93b;
+}
+
+/* الهيدر */
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero h1 {
+    font-size: 42px;
+    font-weight: 900;
+    color: #fff;
+    margin-bottom: 10px;
+    transition: all 0.4s ease;
+}
+
+.hero p {
+    font-size: 20px;
+    color: #e0e0e0;
+}
+
+/* الصورة */
+.image-section {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.responsive {
+    max-width: 40%;
+    border-radius: 20px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.4s ease;
+}
+
+.responsive:hover {
+    transform: scale(1.05) rotate(-1deg);
+}
+
+/* المحتوى */
+.content {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+
+.content h2 {
+    font-size: 26px;
+    margin: 20px 0 10px;
+    color: #ffd369;
+    text-align: right;
+    border-right: 5px solid #fff;
+    padding-right: 10px;
+}
+
+.content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.content ul li {
+    background: rgba(0, 0, 0, 0.3);
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 12px;
+    font-size: 18px;
+    text-align: right;
+    transform: translateX(50px);
+    opacity: 0;
+    transition: all 0.6s ease-out;
+}
+
+/* الفوتر */
+footer {
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+}
+
+/* أنيميشن */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.fade-in.appear {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.slide-in.appear {
+    opacity: 1;
+    transform: translateX(0);
+}
+/* === Responsive Fixes Only === */
+
+/* الصور والفيديوهات تبقى متناسبة مع الشاشة */
+img,
+video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+        margin-left: auto;
+            margin-right: auto;
+}
+
+
+/* لو في جداول تتظبط على الموبايل */
+.table-wrap {
+    overflow-x: auto;
+}

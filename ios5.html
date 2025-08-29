@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>التصفح السليم</title>
+    <meta name="description" content="إزاي تتصفح الإنترنت بأمان وتتجنب المواقع المشبوهة">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="ios5.css">
+</head>
+
+<body>
+    <!-- شريط التنقل -->
+    <nav>
+        <ul class="navbar">
+            <li><a href="ios.html">الرئيسية</a></li>
+            <li><a href="ios8.html">مقالات</a></li>
+            <li><a href="ios.html">نصائح</a></li>
+            <li><a href="project contact.html">تواصل معنا</a></li>
+        </ul>
+    </nav>
+
+    <!-- الهيدر -->
+    <header class="hero fade-in">
+        <h1>التصفح الآمن</h1>
+        <p>إزاي تتجنب المواقع المشبوهة وتحمي بياناتك أثناء التصفح 🌐🔒</p>
+    </header>
+
+    <!-- صورة -->
+    <section class="image-section fade-in">
+        <img src="https://matrix219.net/wp-content/uploads/safe-browsing03.jpg" alt="التصفح الآمن"
+            class="responsive">
+    </section>
+
+    <!-- المحتوى -->
+    <main class="content">
+        <h2 class="fade-in">🚨 مخاطر التصفح الغير آمن</h2>
+        <ul>
+            <li class="slide-in">📥 تنزيل ملفات ضارة من مواقع غير موثوقة.</li>
+            <li class="slide-in">🕵️‍♂️ سرقة بياناتك عن طريق مواقع تصيد (Phishing).</li>
+            <li class="slide-in">💳 الاحتيال المالي عن طريق صفحات دفع مزيفة.</li>
+            <li class="slide-in">📡 مراقبة نشاطك وجمع بياناتك بدون إذنك.</li>
+        </ul>
+
+        <h2 class="fade-in">💡 إزاي تتصفح بأمان؟</h2>
+        <ul>
+            <li class="slide-in">✅ تأكد دايمًا إن الرابط بيبدأ بـ <b>https://</b> مش <b>http://</b>.</li>
+            <li class="slide-in">🔒 استخدم متصفح محدث فيه حماية ضد المواقع الضارة.</li>
+            <li class="slide-in">🚫 تجنب الضغط على الإعلانات المشبوهة.</li>
+            <li class="slide-in">🧩 نزّل إضافات حماية زي "AdBlock" و "NoScript".</li>
+            <li class="slide-in">📧 ما تفتحش الروابط المجهولة في رسائل البريد.</li>
+            <li class="slide-in">👀 افحص دايمًا اسم الموقع كويس (مثلاً go0gle بدل google).</li>
+        </ul>
+
+        <h2 class="fade-in">🔧 أدوات هتفيدك</h2>
+        <ul>
+            <li class="slide-in">🛡️ برامج مكافحة الفيروسات بتمنع المواقع الضارة.</li>
+            <li class="slide-in">🌐 VPN عشان تحافظ على خصوصيتك.</li>
+            <li class="slide-in">⚙️ مدير كلمات مرور يخليك تدخل بياناتك بأمان.</li>
+            <li class="slide-in">🔍 إضافات التصفح الآمن من Google و Microsoft.</li>
+        </ul>
+    </main>
+
+    <!-- فوتر -->
+    <footer class="fade-in">
+        <p>© 2025 موقع الحماية من الاختراق - جميع الحقوق محفوظة</p>
+    </footer>
+
+    <!-- JavaScript للأنيميشن -->
+    <script>
+        const faders = document.querySelectorAll('.fade-in, .slide-in');
+        const appearOptions = { threshold: 0.2 };
+        const appearOnScroll = new IntersectionObserver(function (entries, observer) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                entry.target.classList.add("appear");
+                observer.unobserve(entry.target);
+            });
+        }, appearOptions);
+
+        faders.forEach(fader => {
+            appearOnScroll.observe(fader);
+        });
+
+        // أنيميشن للعنوان
+        document.querySelector(".hero h1").addEventListener("mouseover", function () {
+            this.style.transform = "scale(1.1)";
+            this.style.color = "#f6b93b";
+        });
+        document.querySelector(".hero h1").addEventListener("mouseout", function () {
+            this.style.transform = "scale(1)";
+            this.style.color = "#fff";
+        });
+    </script>
+</body>
+
+</html>

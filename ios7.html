@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>الخصوصية على وسائل التواصل الاجتماعي</title>
+    <meta name="description" content="تعلم كيف تحمي معلوماتك الشخصية على فيسبوك، إنستجرام، وتويتر بخطوات سهلة وعملية.">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="ios7.css">
+</head>
+
+<body>
+
+    <!-- نافبار -->
+    <nav class="nav">
+        <ul class="navbar">
+            <li><a href="ios.html">الرئيسية</a></li>
+            <li><a href="ios6.html">الدروس</a></li>
+            <li><a href="ios8.html">نصائح الأمان</a></li>
+            <li><a href="project contact.html">تواصل</a></li>
+        </ul>
+    </nav>
+
+    <!-- هيرو -->
+    <header class="hero fade-in">
+        <h1>الخصوصية على وسائل التواصل الاجتماعي</h1>
+        <p>إزاي تحمي معلوماتك الشخصية على <strong>فيسبوك، إنستجرام، وتويتر</strong> وتتحكم في اللي يشوف بياناتك.</p>
+        <a class="cta" href="#tips">ابدأ الحماية</a>
+    </header>
+
+    <!-- صورة -->
+    <section class="image-wrap fade-in">
+        <img class="hero-img" src="https://www.ammanjo.co/image.php?token=b4829410c95c89767f3db646a8f9e828&c=3726812&size="
+            alt="Social Media Privacy">
+    </section>
+
+    <main class="container" id="tips">
+        <section class="card-grid">
+
+            <article class="card slide-in">
+                <h2>فيسبوك</h2>
+                <ul class="checklist">
+                    <li>ادخل على <strong>إعدادات الخصوصية</strong> وحدّد مين يقدر يشوف منشوراتك (الأصدقاء فقط).</li>
+                    <li>فعل التنبيه عند تسجيل الدخول من جهاز جديد.</li>
+                    <li>اخفي معلوماتك الحساسة (رقم الهاتف، البريد الشخصي) من البروفايل العام.</li>
+                    <li>راجع التطبيقات المتصلة بحسابك واحذف المشبوهة.</li>
+                </ul>
+            </article>
+
+            <article class="card slide-in">
+                <h2>إنستجرام</h2>
+                <ul class="checklist">
+                    <li>خلّي حسابك <strong>خاص (Private)</strong> علشان المتابعين لازم يوافقوا.</li>
+                    <li>قلل مشاركة الموقع الجغرافي في الصور.</li>
+                    <li>فعّل التحقق بخطوتين (2FA) علشان تمنع الاختراق.</li>
+                    <li>تحكم في التعليقات عبر الإعدادات لمنع الإساءة.</li>
+                </ul>
+            </article>
+
+            <article class="card slide-in">
+                <h2>تويتر (X)</h2>
+                <ul class="checklist">
+                    <li>اختار إن التغريدات تظهر للمتابعين فقط (Protect Tweets) لو حابب الخصوصية.</li>
+                    <li>استخدم اسم مستخدم وبريد مختلف عن حساباتك الأخرى.</li>
+                    <li>افعل خاصية المصادقة الثنائية.</li>
+                    <li>راجع التطبيقات اللي مرتبطة بحسابك.</li>
+                </ul>
+            </article>
+
+            <article class="card slide-in">
+                <h2>نصائح عامة</h2>
+                <ul class="checklist">
+                    <li>تجنّب مشاركة بيانات حساسة (عنوان البيت، رقم الهوية... إلخ).</li>
+                    <li>غيّر كلمات السر بانتظام وخليها قوية.</li>
+                    <li>ما تقبلش طلبات صداقة من أشخاص مجهولين.</li>
+                    <li>اقرأ إعدادات الخصوصية في كل منصة وعدّلها حسب راحتك.</li>
+                </ul>
+            </article>
+
+        </section>
+    </main>
+
+    <!-- فوتر -->
+    <footer class="footer fade-in">
+        <p>© 2025 — دليلك للخصوصية الرقمية</p>
+    </footer>
+
+    <!-- JS: أنيميشن -->
+    <script>
+        const observed = document.querySelectorAll('.fade-in, .slide-in');
+        const io = new IntersectionObserver((entries, obs) => {
+            entries.forEach(e => {
+                if (!e.isIntersecting) return;
+                e.target.classList.add('appear');
+                obs.unobserve(e.target);
+            });
+        }, { threshold: 0.15, rootMargin: "0px 0px -40px 0px" });
+        observed.forEach(el => io.observe(el));
+    </script>
+</body>
+
+</html>
